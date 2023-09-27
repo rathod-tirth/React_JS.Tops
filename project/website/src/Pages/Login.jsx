@@ -42,10 +42,10 @@ function Login() {
 
         if (isUser) {
           toast.success("Logged In");
-          localStorage.setItem("id", isUser.id);
+          localStorage.setItem("userId", isUser.id);
           redirect("/");
         } else {
-          toast.error("Input Incorrect");
+          toast.error("Incorrect Input");
         }
       }
     } catch (error) {

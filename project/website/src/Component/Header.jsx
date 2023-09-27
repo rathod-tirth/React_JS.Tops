@@ -23,7 +23,7 @@ function Header() {
                             </NavLink>
                         </div>
                     </div>
-                    {localStorage.getItem("id") ? (
+                    {localStorage.getItem("userId") ? (
                         <NavLink to="/profile" className="col-lg-4 text-center bg-secondary py-3">
                             <div className="d-inline-flex align-items-center justify-content-center">
                                 <i className="bi bi-person fs-1 text-primary me-3" />

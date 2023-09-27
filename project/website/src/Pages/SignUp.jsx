@@ -46,7 +46,7 @@ function SignUp() {
       if (validation()) {
         const res = await axios.post("http://localhost:3000/user", userValue);
         if (res.status === 201) {
-          localStorage.setItem("id", id);
+          localStorage.setItem("userId", id);
           setUserValue({ id: "", name: "", email: "", password: "", phone: "" });
           toast.success("Account Created");
           redirect("/");
