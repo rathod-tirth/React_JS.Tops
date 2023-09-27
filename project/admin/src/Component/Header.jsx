@@ -1,7 +1,21 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 
 function Header() {
+    useEffect(() => { fetch() }, []);
+    const [admin, setAdmin] = useState({ name: "" });
+
+    const fetch = async () => {
+        try {
+            const res = await axios.get(`http://localhost:3000/admin/${localStorage.getItem("adminId")}`);
+            const data = await res.data;
+            setAdmin(data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <div>
             <div id='wrapper'>
@@ -29,7 +43,7 @@ function Header() {
                                 <div className="user-img-div">
                                     <img src="assets/img/user.png" className="img-thumbnail" alt='...' />
                                     <div className="inner-text">
-                                        Tirth Rathod
+                                        {admin.name}
                                         <br />
                                         <small>Last Login : 1 Min Ago </small>
                                     </div>

@@ -2,8 +2,8 @@
   "admin": [
     {
       "id": 1,
-      "name": "Master",
-      "email": "@admin",
+      "name": "Tirth",
+      "email": "tirth@gmail.com",
       "password": "sd1f43s1"
     }
   ],
@@ -232,36 +232,22 @@
       "id": "1",
       "name": "Jay",
       "email": "@mdo",
-      "subject": "Price to high",
-      "comment": "Your products are to costly compared to market prices. Normal people can't afford it. I suggest you to add cheaper products or reduce the price."
+      "subject": "abcd",
+      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odit quas amet assumenda "
     },
     {
       "id": "2",
       "name": "Devanshu",
       "email": "@dev",
-      "subject": "Party Order",
-      "comment": "I want to order a custom cake for a party. What are the steps to get a custom cake? Pls response fast I only have one week since party."
+      "subject": "Order",
+      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odit quas amet assumenda"
     },
     {
       "id": "1694684943048",
       "name": "John",
       "email": "john@gmail.com",
-      "subject": "too much cream",
-      "comment": "pls add less cream"
-    },
-    {
-      "name": "Tirth",
-      "email": "tirth2@gmail.com",
-      "subject": "flour provider",
-      "comment": "I run a flour shop and would I like to sell some flour to you as sample",
-      "id": "1694784273809"
-    },
-    {
-      "id": "1694784405017",
-      "name": "Tom",
-      "email": "tom@gmail.com",
-      "subject": "invesment",
-      "comment": "would you like to invest in our oven company"
+      "subject": "cream",
+      "comment": "less cream"
     }
   ]
 }

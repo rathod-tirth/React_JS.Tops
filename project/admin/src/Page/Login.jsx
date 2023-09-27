@@ -1,17 +1,10 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { toast } from 'react-toastify';
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Login() {
-    const [value, setValue] = useState([]);
-
-    const fetch = async () => {
-        const res = await axios.get("http://localhost:3000/admin");
-        setValue(res.data);
-    };
-
-    useEffect(() => { fetch() }, []);
+    const redirect = useNavigate();
 
     const [formValue, setFormValue] = useState({
         name: "",
@@ -34,23 +27,27 @@ function Login() {
 
     const changeValue = (e) => {
         setFormValue({ ...formValue, [e.target.name]: e.target.value });
-        console.log(formValue);
     }
 
-    const submitValue = (e) => {
-        let count = 1;
-        e.preventDefault();
-        if (validation()) {
-            value.map((val) => {
-                if (name === val.name && password === val.password) {
-                    // window.location.href = "http://localhost:3001";
-                    toast.success("Logged in successfully");
+    const submitValue = async (e) => {
+        try {
+            e.preventDefault();
+            if (validation()) {
+                const res = await axios.get("http://localhost:3000/admin");
+                const data = await res.data;
+
+                const isUser = data.find(user => user.name === name && user.password === password);
+
+                if (isUser) {
+                    toast.success("Logged In");
+                    localStorage.setItem("adminId", isUser.id);
+                    redirect("/dashboard");
+                } else {
+                    toast.error("Incorrect Input");
                 }
-                return count = 0;
-            })
-            if (count) {
-                toast.error("UserName or Password wrong");
             }
+        } catch (error) {
+            console.log(error);
         }
     };
 
@@ -58,7 +55,7 @@ function Login() {
         <div>
             <div className="container">
                 <div className="row text-center " style={{ paddingTop: 100 }}>
-                    <div className="col-md-12" style={{ "fontSize": "4rem", "fontWeight": "bold" }}>
+                    <div className="col-md-12" style={{ "fontSize": "7rem", "fontWeight": "bold", "fontFamily": "sans-serif" }}>
                         Cake Bake
                     </div>
                 </div>
