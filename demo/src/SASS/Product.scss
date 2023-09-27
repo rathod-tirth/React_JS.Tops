@@ -1,0 +1,64 @@
+// variable declaration
+$size: 300px;
+$mid: center;
+$auto: auto auto auto;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: $auto;
+    justify-content: $mid;
+    gap: 50px;
+    width: 100%;
+    margin: auto;
+
+    // Nested elements
+    .item1 {
+        width: $size;
+        height: $size;
+        background-color: skyblue;
+        text-align: $mid;
+        line-height: $size;
+        transition: 0.2s;
+
+        // Nested Properties
+        font: {
+            weight: 800;
+            family: sans-serif;
+            size: 24px;
+        }
+    }
+
+    // extends/Inheritance of the exisiting style
+    .item2{
+        @extend .item1;
+        background-color: coral;
+    }
+    .item3{
+        @extend .item1;
+        background-color: lightgreen;
+    }
+    .item4{
+        @extend .item1;
+        background-color: crimson;
+    }
+    .item5{
+        @extend .item1;
+        background-color: seagreen;
+    }
+    .item6{
+        @extend .item1;
+        background-color: darkturquoise;
+    }
+
+    .item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .item6:hover{
+        width: 320px;
+        height: 320px;
+    }
+}

@@ -1,0 +1,49 @@
+To make project its called sdlc
+
+There are so many ways to make website
+
+>> Software development life cycle
+
+1. Requirement Gatherring
+2. Analysis = 	a) Total no. of users 
+		b) define task of each module => 
+
+1. Guest >> 	i. View categoary 
+		ii. View Product 
+		iii. View Contact Us 
+		iv. Login/Signup Page 
+		v. View Blog
+
+2. User >> 	i. View categoary 
+		ii. View Product 
+		iii. View Contact Us 
+		iv. Login/Signup Page 
+		v. Order 
+		vi. Manage Order 
+		vii. Manage Profile 
+		viii. Logout
+
+3. Employee >>	i. Login
+		ii. Add Categoary
+		iii. Add Product
+		iv. Manage User
+		v. Manage Order
+		vi. Add Blog
+		vii. Logout
+
+Admin Panel >> Login Page, Dasboard, Add(Form), Manage(Table)
+
+User>> 	Table:
+	id		
+	name
+	email
+	pass
+	mobile
+	gender
+
+form for Signup and Login
+
+admin>> 
+category>>
+product>>
+contact Us>>

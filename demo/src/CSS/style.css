@@ -1,0 +1,11 @@
+.blueCard{
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    background-color: skyblue;
+    padding: 20px 5px;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin: 0 auto;
+}

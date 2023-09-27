@@ -1,0 +1,231 @@
+{
+  "admin": [
+    {
+      "id": 316,
+      "name": "Master",
+      "email": "@admin",
+      "password": "sd1f43s1"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Tirth",
+      "email": "@tirth",
+      "password": "sjijeo546",
+      "phone": "090465132"
+    },
+    {
+      "id": 1,
+      "name": "Dev",
+      "email": "@dev",
+      "password": "fg45f6a",
+      "phone": "45541232"
+    },
+    {
+      "id": 1,
+      "name": "Jay",
+      "email": "@jay",
+      "password": "fasdsd4a",
+      "phone": "768230335"
+    }
+  ],
+  "order": [
+    {
+      "id": 1,
+      "orderno": "52020",
+      "name": "Tirth",
+      "cake": "Vanilla 500g",
+      "price": "₹560",
+      "item": 1
+    },
+    {
+      "id": 2,
+      "orderno": "52021",
+      "name": "Jay",
+      "cake": "Chocolate 2kg",
+      "price": "Free",
+      "item": 1
+    },
+    {
+      "id": 3,
+      "orderno": "8965",
+      "name": "Devanshu",
+      "cake": "Butterscotch 500g",
+      "price": "₹700",
+      "item": 2
+    },
+    {
+      "id": 4,
+      "orderno": "86020",
+      "name": "Deepak",
+      "cake": "Black Forest 750g",
+      "price": "₹1000",
+      "item": 1
+    },
+    {
+      "id": 5,
+      "orderno": "0516",
+      "name": "Mukesh",
+      "cake": "Strawberry 1kg",
+      "price": "₹900",
+      "item": 1
+    },
+    {
+      "id": 6,
+      "orderno": "85122",
+      "name": "Shivam",
+      "cake": "Butterscotch 1kg",
+      "price": "₹2000",
+      "item": 1
+    },
+    {
+      "id": 7,
+      "orderno": "48203",
+      "name": "Janish",
+      "cake": "Vanilla 1kg",
+      "price": "₹1400",
+      "item": 1
+    },
+    {
+      "id": 8,
+      "orderno": "0516",
+      "name": "Mitesh",
+      "cake": "Chocolate 1kg",
+      "price": "₹1000",
+      "item": 1
+    },
+    {
+      "id": 9,
+      "orderno": "0516",
+      "name": "Rohit",
+      "cake": "Butterscotch 750g",
+      "price": "₹1200",
+      "item": 1
+    },
+    {
+      "id": 10,
+      "orderno": "0516",
+      "name": "Aman",
+      "cake": "Vanilla 750g",
+      "price": "₹1100",
+      "item": 1
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "type": "b-day",
+      "price": "₹400-₹10000",
+      "perp": "1 day"
+    },
+    {
+      "id": "2",
+      "type": "wedding",
+      "price": "₹1000-₹15000",
+      "perp": "2 day"
+    },
+    {
+      "id": "3",
+      "type": "custom",
+      "price": "₹5000-₹30000",
+      "perp": "2 day"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "type": "b-day",
+      "flavour": "Vanilla",
+      "weight": "500g",
+      "price": "₹400",
+      "stock": 5
+    },
+    {
+      "id": "2",
+      "type": "b-day",
+      "flavour": "Vanilla",
+      "weight": "1kg",
+      "price": "₹700",
+      "stock": 3
+    },
+    {
+      "id": "3",
+      "type": "b-day",
+      "flavour": "Chocolate",
+      "weight": "500g",
+      "price": "₹500",
+      "stock": 2
+    },
+    {
+      "id": "4",
+      "type": "b-day",
+      "flavour": "Chocolate",
+      "weight": "1kg",
+      "price": "₹900",
+      "stock": 3
+    },
+    {
+      "id": "5",
+      "type": "wedding",
+      "flavour": "Butterscotch",
+      "weight": "1kg",
+      "price": "₹900",
+      "stock": 4
+    },
+    {
+      "id": "6",
+      "type": "b-day",
+      "flavour": "Butterscotch",
+      "weight": "500g",
+      "price": "₹500",
+      "stock": 2
+    },
+    {
+      "id": "7",
+      "type": "b-day",
+      "flavour": "Stawberry",
+      "weight": "2kg",
+      "price": "₹1800",
+      "stock": 1
+    },
+    {
+      "id": "8",
+      "type": "wedding",
+      "flavour": "Chocolate",
+      "weight": "5kg",
+      "price": "₹4200",
+      "stock": 1
+    }
+  ],
+  "blog": [
+    {
+      "title": "blog1",
+      "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odit quas amet assumenda ea dignissimos ipsum laudantium eum suscipit accusamus reiciendis aperiam sit soluta, quisquam nostrum ipsa sapiente, voluptatem qui doloremque. Mollitia illo iure sint, reprehenderit sunt, dolore debitis ducimus facere, ea reiciendis consequuntur. Ad illum maxime impedit aperiam aut ex consequuntur blanditiis, accusantium similique in. Voluptatibus aliquam a numquam modi doloribus. Ratione deserunt beatae tempore incidunt impedit quo iusto, illum unde distinctio vero quia odio quisquam totam ab neque, nesciunt id cupiditate rem at odit sequi? Soluta, unde id. Suscipit laborum neque repellat ut corporis exercitationem officia tempora vel accusamus fugiat odio eum sapiente assumenda, harum modi! Velit quasi minus, esse dolores consectetur amet explicabo autem"
+    },
+    {
+      "title": "blog2",
+      "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odit quas amet assumenda ea dignissimos ipsu consequuntur blanditiis, accusantium similique in. Voluptatibus aliquam a numquam modi doloribus. Ratione deserunt unde id. Suscipit laborum neque repellat ut corporis exercitationem officia tempora vel accusamus fugiat odio eum sapiente assumenda, harum modi! Velit quasi minus, esse dolores consectetur amet explicabo autem"
+    },
+    {
+      "title": "blog3",
+      "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odit quas amet assumenda ea dignissimos ipsu consequuntur blanditiis, accusantium similique in. Voluptatibus aliquam a numquam modi doloribus. Ratione deserunt unde id. Suscipit laborum neque repellat ut corporis exercitationem officia tempora vel accusamus fugiat odio eum sapiente assumenda, harum modi! Velit quasi minus, esse dolores consectetur amet explicabo autem  ipsu consequuntur blanditiis, accusantium similique in. Voluptatibus aliquam a numquam modi doloribus. Ratione deserunt unde id. Suscipit laborum neque repellat ut corporis exercitationem officia tempora vel accusamus fugiat odio eum sapiente assumenda, harum modi! Velit quasi minus, esse dolores consectetur amet explicabo autem"
+    }
+  ],
+  "message": [
+    {
+      "id": "1",
+      "name": "Jay",
+      "email": "@mdo",
+      "subject": "Price to high",
+      "comment": "Your products are to costly compared to market prices. Normal people can't afford it. I suggest you to add cheaper products or reduce the price."
+    },
+    {
+      "id": "2",
+      "name": "Devanshu",
+      "email": "@dev",
+      "subject": "Party Order",
+      "comment": "I want to order a custom cake for a party. What are the steps to get a custom cake? Pls response fast I only have one week since party."
+    }
+  ]
+}
