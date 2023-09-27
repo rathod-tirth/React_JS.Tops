@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 function Header() {
+    const redirect = useNavigate();
     useEffect(() => { fetch() }, []);
     const [admin, setAdmin] = useState({ name: "" });
 
@@ -14,6 +15,12 @@ function Header() {
         } catch (error) {
             console.log(error);
         }
+    };
+
+    const handleLogOut = (e) => {
+        e.preventDefault();
+        localStorage.removeItem("adminId");
+        redirect("/logout");
     };
 
     return (
@@ -96,7 +103,7 @@ function Header() {
                                 </ul>
                             </li>
                             <li>
-                                <NavLink to="/logout"><i className="fa fa-sign-in " />Logout</NavLink>
+                                <NavLink onClick={handleLogOut}><i className="fa fa-sign-in " />Logout</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/error"><i className="fa fa-bug " />Error</NavLink>
