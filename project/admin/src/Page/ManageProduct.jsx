@@ -72,9 +72,10 @@ function ManageProduct() {
   const handleSave = async () => {
     try {
       if (validation()) {
-        const res = await axios.patch(`http://localhost:3000/product/${id}`);
+        const res = await axios.patch(`http://localhost:3000/product/${id}`, value);
         if (res.status === 200) {
           toast.success("Product Updated");
+          fetch();
         }
       }
     } catch (error) {
