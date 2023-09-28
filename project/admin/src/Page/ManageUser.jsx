@@ -9,14 +9,13 @@ function ManageUser() {
 
   const fetch = async () => {
     const res = await axios.get("http://localhost:3000/user");
-    // console.log(res.data);
     setData(res.data);
   }
 
   const deleteData = async (id) => {
     await axios.delete(`http://localhost:3000/user/${id}`);
-    fetch();
     toast.success("Data Deleted Successfully");
+    fetch();
   }
   return (
     <div>
@@ -56,11 +55,8 @@ function ManageUser() {
                                 <td>{password}</td>
                                 <td>{phone}</td>
                                 <td>
-                                  <button type="submit" className="btn btn-success">
-                                    Edit
-                                  </button>
                                   <button type="submit" className="btn btn-danger" onClick={() => deleteData(id)}>
-                                    Delete
+                                    Ban
                                   </button>
                                 </td>
                               </tr>
