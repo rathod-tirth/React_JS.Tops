@@ -14,10 +14,10 @@ import ManageProduct from './Page/ManageProduct';
 import ManageBlog from './Page/ManageBlog';
 import Error from './Page/Error';
 import ManageCate from './Page/ManageCate';
-import ManageAdmin from './Page/ManageAdmin';
 import ManageMessage from './Page/ManageMesaage';
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import Admin from './Page/Admin';
 
 function App() {
   return (
@@ -25,11 +25,11 @@ function App() {
       <ToastContainer></ToastContainer>
       <Routes>
         <Route path="/" element={<><Login /></>}></Route>
+        <Route path="/admin" element={<><Header /> <Admin /> <Footer /></>}></Route>
         <Route path="/dashboard" element={<><Header /> <Dashboard /> <Footer /> </>}></Route>
         <Route path="/addCategory" element={<><Header /> <AddCategory /> <Footer /></>}></Route>
         <Route path="/addProduct" element={<><Header /> <AddProduct /> <Footer /></>}></Route>
         <Route path="/addBlog" element={<><Header /> <AddBlog /> <Footer /></>}></Route>
-        <Route path="/manageAdmin" element={<><Header /> <ManageAdmin /> <Footer /></>}></Route>
         <Route path="/manageUser" element={<><Header /> <ManageUser /> <Footer /></>}></Route>
         <Route path="/manageOrder" element={<><Header /> <ManageOrder /> <Footer /></>}></Route>
         <Route path="/logout" element={<><Logout /></>}></Route>

@@ -57,6 +57,9 @@ function Header() {
                                 </div>
                             </li>
                             <li>
+                                <NavLink to="/admin"><i className="fa fa-user " />Admin</NavLink>
+                            </li>
+                            <li>
                                 <NavLink to="/dashboard"><i className="fa fa-dashboard " />Dashboard</NavLink>
                             </li>
                             <li>
@@ -79,9 +82,6 @@ function Header() {
                             <li>
                                 <Link to="#"><i className="fa fa-desktop "></i>Manage<span className="fa arrow"></span></Link>
                                 <ul className="nav nav-second-level">
-                                    <li>
-                                        <NavLink to="/manageAdmin"><i className="fa fa-send"></i>Manage Admin</NavLink>
-                                    </li>
                                     <li>
                                         <NavLink to="/manageUser"><i className="fa fa-send"></i>Manage User</NavLink>
                                     </li>
