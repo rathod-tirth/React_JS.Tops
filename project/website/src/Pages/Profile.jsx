@@ -18,7 +18,7 @@ function Profile() {
 
    const fetch = async () => {
       try {
-         const res = await axios.get(`http://localhost:3000/user/${localStorage.getItem("id")}`);
+         const res = await axios.get(`http://localhost:3000/user/${localStorage.getItem("userId")}`);
          const data = res.data;
          setUserValue(data);
       } catch (error) {
@@ -61,10 +61,11 @@ function Profile() {
       try {
          e.preventDefault();
          if (validation()) {
-            const res = await axios.patch(`http://localhost:3000/user/${localStorage.getItem("id")}`, formValue);
+            const res = await axios.patch(`http://localhost:3000/user/${localStorage.getItem("userId")}`, formValue);
             if (res.status === 200) {
                setFormValue({});
                setIsEdit(false);
+               fetch();
                toast.success("Edit Saved");
             }
          }
@@ -80,7 +81,7 @@ function Profile() {
 
    const handleLogOut = (e) => {
       e.preventDefault();
-      localStorage.clear();
+      localStorage.removeItem("userId");
       toast.success("Logged Out");
       redirect("/");
    }
