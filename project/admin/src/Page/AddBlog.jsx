@@ -42,35 +42,37 @@ function AddBlog() {
 
     return (
         <div>
-            <div id="page-wrapper">
-                <div id="page-inner">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="page-head-line">Add Blog</h1>
+            <div id='wrapper'>
+                <div id="page-wrapper">
+                    <div id="page-inner">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h1 className="page-head-line">Add Blog</h1>
+                            </div>
                         </div>
-                    </div>
-                    {/* /. ROW  */}
-                    <div className="row">
-                        <div className="col-md-12 col-sm-12 col-xs-12">
-                            <div className="panel panel-info">
-                                <div className="panel-body">
-                                    <form>
-                                        <div className="form-group">
-                                            <label>Title</label>
-                                            <input className="form-control" type="text" name='title' onChange={changeValue} value={title} />
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Blog</label>
-                                            <textarea className="form-control" rows={30} name='blog' onChange={changeValue} value={blog} />
-                                        </div>
-                                        <button className="btn btn-info" onClick={submitValue}>Add Blog</button>
-                                    </form>
+                        {/* /. ROW  */}
+                        <div className="row">
+                            <div className="col-md-12 col-sm-12 col-xs-12">
+                                <div className="panel panel-info">
+                                    <div className="panel-body">
+                                        <form>
+                                            <div className="form-group">
+                                                <label>Title</label>
+                                                <input className="form-control" type="text" name='title' onChange={changeValue} value={title} />
+                                            </div>
+                                            <div className="form-group">
+                                                <label>Blog</label>
+                                                <textarea className="form-control" rows={30} name='blog' onChange={changeValue} value={blog} />
+                                            </div>
+                                            <button className="btn btn-info" onClick={submitValue}>Add Blog</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {/* /. PAGE INNER  */}
                 </div>
-                {/* /. PAGE INNER  */}
             </div>
         </div>
     )

@@ -85,93 +85,95 @@ function ManageProduct() {
 
   return (
     <div>
-      <div id="page-wrapper">
-        <div id="page-inner">
-          <div className="row">
-            <div className="col-md-12">
-              <h1 className="page-head-line">Stock Table</h1>
+      <div id="wrapper">
+        <div id="page-wrapper">
+          <div id="page-inner">
+            <div className="row">
+              <div className="col-md-12">
+                <h1 className="page-head-line">Stock Table</h1>
+              </div>
             </div>
-          </div>
-          {/* /. ROW  */}
-          <div className="row">
-            <div className="col-md-12">
-              <div className="panel panel-default">
-                <div className="panel-body">
-                  <div className="table-responsive">
-                    <table className="table table-striped table-bordered table-hover">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Type</th>
-                          <th>Flavour</th>
-                          <th>Weight</th>
-                          <th>Price</th>
-                          <th>Stock</th>
-                          <th>Edit/Delete</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {
-                          data.map((product) => {
-                            const { id, type, flavour, weight, price, stock } = product;
-                            return (
-                              <tr key={id}>
-                                <td>{id}</td>
-                                <td>{type}</td>
-                                <td>{flavour}</td>
-                                <td>{weight}</td>
-                                <td>{price}</td>
-                                <td>{stock}</td>
-                                <td>
-                                  <button type="submit" className="btn btn-success" data-toggle="modal" data-target="#myModal" onClick={() => { handleEdit(id) }}>
-                                    Edit
-                                  </button>
-                                  <button type="submit" className="btn btn-danger" onClick={() => deleteData(id)}>
-                                    Delete
-                                  </button>
-                                </td>
-                              </tr>
-                            );
-                          })
-                        }
-                      </tbody>
-                    </table>
-                    <div className="modal" id="myModal">
-                      <div className="modal-dialog">
-                        <div className="modal-content">
-                          {/* Modal Header */}
-                          <div className="modal-header">
-                            <h2 className="modal-title text-primary">Edit</h2>
-                          </div>
-                          {/* Modal body */}
-                          <div class="modal-body">
-                            <form action="/action_page.php">
-                              <div className="form-group">
-                                <label htmlFor="type">Type</label>
-                                <input type="text" className="form-control" onChange={handleChange} name="type" value={type} />
-                              </div>
-                              <div className="form-group">
-                                <label htmlFor="text">Flavour</label>
-                                <input type="text" className="form-control" onChange={handleChange} name="flavour" value={flavour} />
-                              </div>
-                              <div className="form-group">
-                                <label htmlFor="text">Weight</label>
-                                <input type="text" className="form-control" onChange={handleChange} name="weight" value={weight} />
-                              </div>
-                              <div className="form-group">
-                                <label htmlFor="text">Price</label>
-                                <input type="text" className="form-control" onChange={handleChange} name="price" value={price} />
-                              </div>
-                              <div className="form-group">
-                                <label htmlFor="text">Stock</label>
-                                <input type="text" className="form-control" onChange={handleChange} name="stock" value={stock} />
-                              </div>
-                              <button type="submit" className="btn btn-primary" data-dismiss="modal" onClick={handleSave}>Save</button>
-                            </form>
-                          </div>
-                          {/* Modal footer */}
-                          <div className="modal-footer">
-                            <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
+            {/* /. ROW  */}
+            <div className="row">
+              <div className="col-md-12">
+                <div className="panel panel-default">
+                  <div className="panel-body">
+                    <div className="table-responsive">
+                      <table className="table table-striped table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Type</th>
+                            <th>Flavour</th>
+                            <th>Weight</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Edit/Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {
+                            data.map((product) => {
+                              const { id, type, flavour, weight, price, stock } = product;
+                              return (
+                                <tr key={id}>
+                                  <td>{id}</td>
+                                  <td>{type}</td>
+                                  <td>{flavour}</td>
+                                  <td>{weight}</td>
+                                  <td>{price}</td>
+                                  <td>{stock}</td>
+                                  <td>
+                                    <button type="submit" className="btn btn-success" data-toggle="modal" data-target="#myModal" onClick={() => { handleEdit(id) }}>
+                                      Edit
+                                    </button>
+                                    <button type="submit" className="btn btn-danger" onClick={() => deleteData(id)}>
+                                      Delete
+                                    </button>
+                                  </td>
+                                </tr>
+                              );
+                            })
+                          }
+                        </tbody>
+                      </table>
+                      <div className="modal" id="myModal">
+                        <div className="modal-dialog">
+                          <div className="modal-content">
+                            {/* Modal Header */}
+                            <div className="modal-header">
+                              <h2 className="modal-title text-primary">Edit</h2>
+                            </div>
+                            {/* Modal body */}
+                            <div class="modal-body">
+                              <form action="/action_page.php">
+                                <div className="form-group">
+                                  <label htmlFor="type">Type</label>
+                                  <input type="text" className="form-control" onChange={handleChange} name="type" value={type} />
+                                </div>
+                                <div className="form-group">
+                                  <label htmlFor="text">Flavour</label>
+                                  <input type="text" className="form-control" onChange={handleChange} name="flavour" value={flavour} />
+                                </div>
+                                <div className="form-group">
+                                  <label htmlFor="text">Weight</label>
+                                  <input type="text" className="form-control" onChange={handleChange} name="weight" value={weight} />
+                                </div>
+                                <div className="form-group">
+                                  <label htmlFor="text">Price</label>
+                                  <input type="text" className="form-control" onChange={handleChange} name="price" value={price} />
+                                </div>
+                                <div className="form-group">
+                                  <label htmlFor="text">Stock</label>
+                                  <input type="text" className="form-control" onChange={handleChange} name="stock" value={stock} />
+                                </div>
+                                <button type="submit" className="btn btn-primary" data-dismiss="modal" onClick={handleSave}>Save</button>
+                              </form>
+                            </div>
+                            {/* Modal footer */}
+                            <div className="modal-footer">
+                              <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -181,8 +183,8 @@ function ManageProduct() {
               </div>
             </div>
           </div>
+          {/* /. PAGE INNER  */}
         </div>
-        {/* /. PAGE INNER  */}
       </div>
     </div>
   );

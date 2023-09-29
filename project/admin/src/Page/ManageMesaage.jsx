@@ -19,62 +19,64 @@ function ManageMessage() {
     }
     return (
         <div>
-            <div id="page-wrapper">
-                <div id="page-inner">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="page-head-line">Message Table</h1>
+            <div id="wrapper">
+                <div id="page-wrapper">
+                    <div id="page-inner">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h1 className="page-head-line">Message Table</h1>
+                            </div>
                         </div>
-                    </div>
-                    {/* /. ROW  */}
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="panel panel-default">
-                                <div className="panel-body">
-                                    <div className="table-responsive">
-                                        <table className="table table-striped table-bordered table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Subject</th>
-                                                    <th>Comment</th>
-                                                    <th>Edit/Delete</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {
-                                                    data.map((data) => {
-                                                        const { id, name, email, subject, comment } = data;
-                                                        return (
-                                                            <tr key={id}>
-                                                                <td>{id}</td>
-                                                                <td>{name}</td>
-                                                                <td>{email}</td>
-                                                                <td>{subject}</td>
-                                                                <td>{comment}</td>
-                                                                <td>
-                                                                    <button type="submit" className="btn btn-success">
-                                                                        Reply
-                                                                    </button>
-                                                                    <button type="submit" className="btn btn-danger" onClick={() => deleteData(id)}>
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                        );
-                                                    })
-                                                }
-                                            </tbody>
-                                        </table>
+                        {/* /. ROW  */}
+                        <div className="row">
+                            <div className="col-md-12">
+                                <div className="panel panel-default">
+                                    <div className="panel-body">
+                                        <div className="table-responsive">
+                                            <table className="table table-striped table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Subject</th>
+                                                        <th>Comment</th>
+                                                        <th>Edit/Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {
+                                                        data.map((data) => {
+                                                            const { id, name, email, subject, comment } = data;
+                                                            return (
+                                                                <tr key={id}>
+                                                                    <td>{id}</td>
+                                                                    <td>{name}</td>
+                                                                    <td>{email}</td>
+                                                                    <td>{subject}</td>
+                                                                    <td>{comment}</td>
+                                                                    <td>
+                                                                        <button type="submit" className="btn btn-success">
+                                                                            Reply
+                                                                        </button>
+                                                                        <button type="submit" className="btn btn-danger" onClick={() => deleteData(id)}>
+                                                                            Delete
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            );
+                                                        })
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {/* /. PAGE INNER  */}
                 </div>
-                {/* /. PAGE INNER  */}
             </div>
         </div>
     );

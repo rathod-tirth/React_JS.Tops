@@ -65,86 +65,88 @@ function AddProduct() {
     };
     return (
         <div>
-            <div id="page-wrapper">
-                <div id="page-inner">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="page-head-line">Add Cake</h1>
+            <div id='wrapper'>
+                <div id="page-wrapper">
+                    <div id="page-inner">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h1 className="page-head-line">Add Cake</h1>
+                            </div>
                         </div>
-                    </div>
-                    {/*/.ROW*/}
-                    <div className="row">
-                        <div className="col-md-12 col-sm-12 col-xs-12">
-                            <div className="panel panel-primary">
-                                <div className="panel-heading">
-                                    Add Cake
-                                </div>
-                                <div className="panel-body">
-                                    <div className="form-group">
-                                        <label>Type</label>
-                                        <select className="form-control" onChange={changeValue} name='type'>
-                                            <option disabled selected> -- Select -- </option>
-                                            {value.map((val) => {
-                                                return (
-                                                    <option key={val.id}>{val.type}</option>
-                                                );
-                                            })}
-                                        </select>
+                        {/*/.ROW*/}
+                        <div className="row">
+                            <div className="col-md-12 col-sm-12 col-xs-12">
+                                <div className="panel panel-primary">
+                                    <div className="panel-heading">
+                                        Add Cake
                                     </div>
-                                    <hr />
-                                    <div className="form-group">
-                                        <label>Weight</label>
-                                        <select className="form-control" onChange={changeValue} name='weight'>
-                                            <option disabled selected> -- Select -- </option>
-                                            <option>500g</option>
-                                            <option>1kg</option>
-                                            <option>2kg</option>
-                                            <option>5kg</option>
-                                            <option>5kg+</option>
-                                        </select>
+                                    <div className="panel-body">
+                                        <div className="form-group">
+                                            <label>Type</label>
+                                            <select className="form-control" onChange={changeValue} name='type'>
+                                                <option disabled selected> -- Select -- </option>
+                                                {value.map((val) => {
+                                                    return (
+                                                        <option key={val.id}>{val.type}</option>
+                                                    );
+                                                })}
+                                            </select>
+                                        </div>
+                                        <hr />
+                                        <div className="form-group">
+                                            <label>Weight</label>
+                                            <select className="form-control" onChange={changeValue} name='weight'>
+                                                <option disabled selected> -- Select -- </option>
+                                                <option>500g</option>
+                                                <option>1kg</option>
+                                                <option>2kg</option>
+                                                <option>5kg</option>
+                                                <option>5kg+</option>
+                                            </select>
+                                        </div>
+                                        <hr />
+                                        <div className="form-group">
+                                            <label>Flavour</label>
+                                            <select className="form-control" onChange={changeValue} name='flavour'>
+                                                <option disabled selected> -- Select -- </option>
+                                                <option>Vanilla</option>
+                                                <option>Chocolate</option>
+                                                <option>Butterscotch</option>
+                                                <option>Strawberry</option>
+                                            </select>
+                                        </div>
+                                        <hr />
+                                        <div className="form-group">
+                                            <label>Price</label>
+                                            <select className="form-control" onChange={changeValue} name='price'>
+                                                <option disabled selected> -- Select -- </option>
+                                                <option>Rs. 0-500</option>
+                                                <option>Rs. 500-1000</option>
+                                                <option>Rs. 1000-5000</option>
+                                                <option>Rs. 5000+</option>
+                                            </select>
+                                        </div>
+                                        <hr />
+                                        <div className="form-group">
+                                            <label>Stock</label>
+                                            <select className="form-control" onChange={changeValue} name='stock'>
+                                                <option disabled selected> -- Select -- </option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <hr />
+                                        <button type="submit" className="btn btn-info" onClick={submitValue}>Add Cake</button>
                                     </div>
-                                    <hr />
-                                    <div className="form-group">
-                                        <label>Flavour</label>
-                                        <select className="form-control" onChange={changeValue} name='flavour'>
-                                            <option disabled selected> -- Select -- </option>
-                                            <option>Vanilla</option>
-                                            <option>Chocolate</option>
-                                            <option>Butterscotch</option>
-                                            <option>Strawberry</option>
-                                        </select>
-                                    </div>
-                                    <hr />
-                                    <div className="form-group">
-                                        <label>Price</label>
-                                        <select className="form-control" onChange={changeValue} name='price'>
-                                            <option disabled selected> -- Select -- </option>
-                                            <option>Rs. 0-500</option>
-                                            <option>Rs. 500-1000</option>
-                                            <option>Rs. 1000-5000</option>
-                                            <option>Rs. 5000+</option>
-                                        </select>
-                                    </div>
-                                    <hr />
-                                    <div className="form-group">
-                                        <label>Stock</label>
-                                        <select className="form-control" onChange={changeValue} name='stock'>
-                                            <option disabled selected> -- Select -- </option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
-                                    <hr />
-                                    <button type="submit" className="btn btn-info" onClick={submitValue}>Add Cake</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {/* /. PAGE INNER  */}
                 </div>
-                {/* /. PAGE INNER  */}
             </div>
         </div>
     )
