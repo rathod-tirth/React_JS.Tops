@@ -23,7 +23,7 @@ function ManageProduct() {
   }
 
   const deleteData = async (id) => {
-    await axios.delete(`http://localhost:3000/user/${id}`);
+    await axios.delete(`http://localhost:3000/product/${id}`);
     toast.success("Product Deleted");
     fetch();
   }
