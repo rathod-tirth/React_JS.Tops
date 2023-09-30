@@ -12,7 +12,7 @@
       "id": 1,
       "name": "Tirth",
       "email": "tirth@gmail.com",
-      "password": "123",
+      "password": "1234",
       "phone": "9974656561"
     },
     {
@@ -195,14 +195,6 @@
       "weight": "5kg",
       "price": "4200",
       "stock": 1
-    },
-    {
-      "id": "7802",
-      "type": "b-day",
-      "flavour": "Chocolate",
-      "weight": "1kg",
-      "price": "Rs. 500-1000",
-      "stock": "1"
     }
   ],
   "blog": [

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'
 
 function ManageUser() {
   useEffect(() => { fetch() }, []);
+
+  const redirect = useNavigate();
 
   const [data, setData] = useState([]);
 
@@ -56,6 +59,9 @@ function ManageUser() {
                                   <td>{password}</td>
                                   <td>{phone}</td>
                                   <td>
+                                    <button type="submit" className="btn btn-success" onClick={() => { redirect(`/editUser/${id}`) }}>
+                                      Edit
+                                    </button>
                                     <button type="submit" className="btn btn-danger" onClick={() => deleteData(id)}>
                                       Ban
                                     </button>

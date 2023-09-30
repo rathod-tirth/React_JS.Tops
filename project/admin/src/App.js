@@ -18,6 +18,7 @@ import ManageMessage from './Page/ManageMesaage';
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import Admin from './Page/Admin';
+import EditUser from './Page/EditUser';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/addProduct" element={<><Header /> <AddProduct /> <Footer /></>}></Route>
         <Route path="/addBlog" element={<><Header /> <AddBlog /> <Footer /></>}></Route>
         <Route path="/manageUser" element={<><Header /> <ManageUser /> <Footer /></>}></Route>
+        <Route path="/editUser/:id" element={<><Header /> <EditUser /> <Footer /></>}></Route>
         <Route path="/manageOrder" element={<><Header /> <ManageOrder /> <Footer /></>}></Route>
         <Route path="/logout" element={<><Logout /></>}></Route>
         <Route path="/manageCate" element={<><Header /> <ManageCate /> <Footer /></>}></Route>
