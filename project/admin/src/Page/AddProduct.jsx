@@ -129,14 +129,7 @@ function AddProduct() {
                                         <hr />
                                         <div className="form-group">
                                             <label>Stock</label>
-                                            <select className="form-control" onChange={changeValue} name='stock'>
-                                                <option disabled selected> -- Select -- </option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
+                                            <input className='form-control' type="number" name="stock" onChange={changeValue} />
                                         </div>
                                         <hr />
                                         <button type="submit" className="btn btn-info" onClick={submitValue}>Add Cake</button>
