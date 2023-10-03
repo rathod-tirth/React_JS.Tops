@@ -41,9 +41,13 @@ function Login() {
         const isUser = userData.find(user => user.name === name && user.password === password);
 
         if (isUser) {
-          toast.success("Logged In");
-          localStorage.setItem("userId", isUser.id);
-          redirect("/");
+          if (isUser.status) {
+            toast.success("Logged In");
+            localStorage.setItem("userId", isUser.id);
+            redirect("/");
+          } else {
+            toast.error("Account Blocked");
+          }
         } else {
           toast.error("Incorrect Input");
         }

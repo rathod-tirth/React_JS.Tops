@@ -13,14 +13,16 @@
       "name": "Tirth",
       "email": "tirth@gmail.com",
       "password": "1234",
-      "phone": "9974656561"
+      "phone": "9974656561",
+      "status": true
     },
     {
       "id": "5235",
       "name": "Dev",
       "email": "dev@gmail.com",
       "password": "dev123",
-      "phone": "984561616"
+      "phone": "984561616",
+      "status": true
     }
   ],
   "order": [
@@ -119,16 +121,10 @@
       "prep": "2"
     },
     {
-      "id": "3",
-      "type": "custom",
-      "price": "5000-30000",
-      "prep": "2"
-    },
-    {
-      "id": "3616",
-      "type": "Party",
-      "price": "2000-5000",
-      "prep": "2"
+      "id": "0770",
+      "type": "Custom",
+      "price": "1000-2000",
+      "prep": "1 days"
     }
   ],
   "product": [

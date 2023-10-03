@@ -1,7 +1,21 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import axios from 'axios'
+import { useEffect } from 'react';
 
 function Header() {
+    useEffect(() => { fetch() });
+    const fetch = async () => {
+        try {
+            const res = await axios.get(`http://localhost:3000/user/${localStorage.getItem("userId")}`);
+            const data = res.data;
+            if (data.status) {
+                localStorage.removeItem("userId");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
     return (
         <div>
             {/* Topbar Start */}

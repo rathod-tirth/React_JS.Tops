@@ -20,6 +20,23 @@ function ManageUser() {
     toast.success("Data Deleted Successfully");
     fetch();
   }
+
+  const handleStatus = async (id) => {
+    try {
+      const res = await axios.get(`http://localhost:3000/user/${id}`);
+      const data = await res.data;
+      if (data.status) {
+        await axios.patch(`http://localhost:3000/user/${id}`, { status: false });
+        toast.success("User Blocked");
+      } else {
+        await axios.patch(`http://localhost:3000/user/${id}`, { status: true });
+        toast.success("User UnBlocked");
+      }
+      fetch();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       <div id="wrapper">
@@ -44,13 +61,14 @@ function ManageUser() {
                             <th>Email</th>
                             <th>Password</th>
                             <th>Phone</th>
+                            <th>Status</th>
                             <th>Edit/Delete</th>
                           </tr>
                         </thead>
                         <tbody>
                           {
                             data.map((user) => {
-                              const { id, name, email, password, phone } = user;
+                              const { id, name, email, password, phone, status } = user;
                               return (
                                 <tr key={id}>
                                   <td>{id}</td>
@@ -58,12 +76,16 @@ function ManageUser() {
                                   <td>{email}</td>
                                   <td>{password}</td>
                                   <td>{phone}</td>
+                                  <td>{status ? "Unblock" : "Block"}</td>
                                   <td>
                                     <button type="submit" className="btn btn-success" onClick={() => { redirect(`/editUser/${id}`) }}>
                                       Edit
                                     </button>
                                     <button type="submit" className="btn btn-danger" onClick={() => deleteData(id)}>
-                                      Ban
+                                      Delete
+                                    </button>
+                                    <button type="submit" className="btn btn-primary" onClick={() => { handleStatus(id) }}>
+                                      {status ? "Block" : "Unblock"}
                                     </button>
                                   </td>
                                 </tr>
