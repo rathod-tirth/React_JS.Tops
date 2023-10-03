@@ -23,6 +23,14 @@
       "password": "dev123",
       "phone": "984561616",
       "status": true
+    },
+    {
+      "id": "9368",
+      "name": "Jay",
+      "email": "jay@gmail.com",
+      "password": "f1234",
+      "phone": "8945161651",
+      "status": true
     }
   ],
   "order": [
