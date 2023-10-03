@@ -10,7 +10,8 @@ function SignUp() {
     name: "",
     email: "",
     password: "",
-    phone: ""
+    phone: "",
+    status: true
   });
 
   const { id, name, email, password, phone } = userValue;
@@ -47,7 +48,7 @@ function SignUp() {
         const res = await axios.post("http://localhost:3000/user", userValue);
         if (res.status === 201) {
           localStorage.setItem("userId", id);
-          setUserValue({ id: "", name: "", email: "", password: "", phone: "" });
+          setUserValue({ id: "", name: "", email: "", password: "", phone: "", status: true });
           toast.success("Account Created");
           redirect("/");
         }
