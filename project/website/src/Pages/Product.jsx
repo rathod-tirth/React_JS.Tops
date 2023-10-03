@@ -25,22 +25,24 @@ function Product() {
                      <div className="tab-pane fade show p-0 active">
                         <div className="row g-3">
                            {value.map((val) => {
-                              const { id, type, flavour, weight, price } = val;
-                              return (
-                                 <div className="col-lg-6" key={id}>
-                                    <div className="d-flex h-100">
-                                       <div className="flex-shrink-0">
-                                          <img className="img-fluid" src="img/cake-1.jpg" alt="img" style={{ width: 150, height: 85 }} />
-                                          <h4 className="bg-dark text-primary p-2 m-0">₹{price}</h4>
-                                       </div>
-                                       <div className="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4 w-50">
-                                          <h5 className="text-uppercase">{type}</h5>
-                                          <span>{flavour}</span>
-                                          <span>{weight}</span>
+                              const { id, type, flavour, weight, price, stock } = val;
+                              if (stock !== "0") {
+                                 return (
+                                    <div className="col-lg-6" key={id}>
+                                       <div className="d-flex h-100">
+                                          <div className="flex-shrink-0">
+                                             <img className="img-fluid" src="img/cake-1.jpg" alt="img" style={{ width: 150, height: 85 }} />
+                                             <h4 className="bg-dark text-primary p-2 m-0">₹{price}</h4>
+                                          </div>
+                                          <div className="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4 w-50">
+                                             <h5 className="text-uppercase">{type}</h5>
+                                             <span>{flavour}</span>
+                                             <span>{weight}</span>
+                                          </div>
                                        </div>
                                     </div>
-                                 </div>
-                              );
+                                 );
+                              }
                            })}
                         </div>
                      </div>

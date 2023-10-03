@@ -198,7 +198,7 @@
       "flavour": "Chocolate",
       "weight": "5kg",
       "price": "4200",
-      "stock": 1
+      "stock": "1"
     }
   ],
   "blog": [
