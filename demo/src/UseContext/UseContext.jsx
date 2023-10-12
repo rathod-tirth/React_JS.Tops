@@ -2,7 +2,7 @@ import A from "./A"
 
 function UseContext() {
    return (
-      <div>
+      <div className="ms-5">
          <A />
       </div>
    )
