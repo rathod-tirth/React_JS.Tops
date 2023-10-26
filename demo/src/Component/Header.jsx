@@ -17,6 +17,7 @@ function Header() {
             <Nav.Link><NavLink to="/product">Product</NavLink></Nav.Link>
             <Nav.Link><NavLink to="/state">State</NavLink></Nav.Link>
             <Nav.Link><NavLink to="/context">Context</NavLink></Nav.Link>
+            <Nav.Link><NavLink to="/reducer">Reducer</NavLink></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
