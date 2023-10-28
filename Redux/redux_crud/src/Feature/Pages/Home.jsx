@@ -1,7 +1,10 @@
+import { useSelector } from "react-redux"
+
 function Home() {
+   const { name } = useSelector((state) => state.user);
    return (
       <div>
-         <img class="w3-image" src="https://www.w3schools.com/w3images/architect.jpg" alt="Architecture" width="1500" height="800"></img>
+         <img className="w3-image" src="https://www.w3schools.com/w3images/architect.jpg" alt="Architecture" width="1500" height="800"></img>
          <div className="w3-display-middle w3-margin-top w3-center">
             <h1 className="w3-xxlarge w3-text-white"><span className="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span className="w3-hide-small w3-text-light-grey">Architects</span></h1>
          </div>
@@ -74,7 +77,7 @@ function Home() {
             <div className="w3-row-padding w3-grayscale">
                <div className="w3-col l3 m6 w3-margin-bottom">
                   <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style={{ width: '100%' }} />
-                  <h3>John Doe</h3>
+                  <h3>{name}</h3>
                   <p className="w3-opacity">CEO &amp; Founder</p>
                   <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
                   <p><button className="w3-button w3-light-grey w3-block">Contact</button></p>
