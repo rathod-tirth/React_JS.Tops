@@ -4,22 +4,22 @@
       "id": 1,
       "name": "Tirth",
       "email": "tirth@gmail.com",
-      "pass": "566262",
-      "mobile": "16516516"
+      "password": "1981961",
+      "mobile": "251651631"
     },
     {
       "id": 2,
       "name": "Dev",
       "email": "dev@gmail.com",
-      "pass": "5156",
-      "mobile": "549560620"
+      "password": "741656",
+      "mobile": "54651665"
     },
     {
       "id": 3,
       "name": "Jay",
       "email": "jay@gmail.com",
-      "pass": "95660",
-      "mobile": "1560620"
+      "password": "46851",
+      "mobile": "51654132"
     }
   ]
 }
