@@ -5,7 +5,7 @@
       "name": "abc",
       "email": "abc@gmail.com",
       "password": "123",
-      "mobile": "7465165"
+      "mobile": "7465"
     },
     {
       "id": "0822",
@@ -34,13 +34,6 @@
       "email": "xyz@gmail.com",
       "password": "789",
       "mobile": "798435135"
-    },
-    {
-      "id": "5843",
-      "name": "pqr",
-      "email": "pqr",
-      "password": "123",
-      "mobile": "86553"
     }
   ]
 }
