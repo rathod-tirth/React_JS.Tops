@@ -122,7 +122,7 @@ function User() {
                      </div>
                      {/* Modal body */}
                      <div className="modal-body">
-                        <form target="_blank">
+                        <form>
                            <input className="w3-input w3-border" type="text" onChange={(e) => handleChange(e)} value={formValue.name} placeholder="Name" name="name" />
                            <input className="w3-input w3-section w3-border" onChange={(e) => handleChange(e)} value={formValue.email} type="email" placeholder="Email" name="email" />
                            <input className="w3-input w3-section w3-border" onChange={(e) => handleChange(e)} value={formValue.password} type="password" placeholder="Password" name="password" />
