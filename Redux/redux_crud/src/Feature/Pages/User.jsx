@@ -15,11 +15,14 @@ function User() {
       if (singleUser) {
          setFormValue(singleUser);
       }
-   }, [allUser, singleUser])
+   }, [singleUser])
 
    const handleDelete = (id) => {
-      dispatch(deleteData(`http://localhost:3000/user/${id}`));
-      toast.success("Data Deleted!!");
+      dispatch(deleteData(`http://localhost:3000/user/${id}`))
+      setTimeout(() => {
+         dispatch(fetchUser("http://localhost:3000/user"));
+      })
+      toast.success("Data Deleted");
    }
 
    const [formValue, setFormValue] = useState({
@@ -65,6 +68,9 @@ function User() {
       e.preventDefault();
       if (validation()) {
          dispatch(updateData(`http://localhost:3000/user/${id}`, formValue));
+         setTimeout(() => {
+            dispatch(fetchUser("http://localhost:3000/user"));
+         })
          setFormValue({ id: "", name: "", email: "", password: "", mobile: "" });
          toast.success("Edit Successfull");
       }

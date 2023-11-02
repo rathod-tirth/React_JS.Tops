@@ -28,6 +28,8 @@ const userReducer = (state = userObject, action) => {
 
 export default userReducer;
 
+const getData = (data) => ({ type: ALLDATA, payload: data });
+
 export const fetchUser = (api) => {
    return function (dispatch) {
       axios.get(api)
@@ -35,7 +37,7 @@ export const fetchUser = (api) => {
    }
 }
 
-const getData = (data) => ({ type: ALLDATA, payload: data })
+const getSingleData = (data) => ({ type: SINGLEDATA, payload: data });
 
 export const fetchSingleUser = (api) => {
    return function (dispatch) {
@@ -44,5 +46,4 @@ export const fetchSingleUser = (api) => {
    }
 }
 
-const getSingleData = (data) => ({ type: SINGLEDATA, payload: data })
 
