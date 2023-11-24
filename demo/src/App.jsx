@@ -8,6 +8,7 @@ import Product from "./SASS/Product";
 import State from "./Pages/State";
 import UseContext from "./UseContext/UseContext";
 import UseReducer from "./Reducer/UseReducer";
+import TooltipModal from "./Tooltip/TooltipModal";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/state' element={<><Header /><State /><Footer /></>}></Route>
         <Route path='/context' element={<><Header /><UseContext /><Footer /></>}></Route>
         <Route path='/reducer' element={<><Header /><UseReducer />  <Footer /></>}></Route>
+        <Route path='/tooltip' element={<><Header /><TooltipModal />  <Footer /></>}></Route>
       </Routes>
     </BrowserRouter>
 
